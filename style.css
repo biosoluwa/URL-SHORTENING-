@@ -1,0 +1,269 @@
+*{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body,html{
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #9E9AA7;
+    background-color: #FFFFFF;
+    padding-top: 36px;
+    font-size: 1.125rem; 
+}
+
+h1,h3{
+    color: #35323E;
+}
+
+h1{
+    font-size: 2.25rem;
+}
+
+h2{
+   color: #000000;
+   font-size: 1.875rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+h3.boost-text, h4{
+    color: white;
+}
+
+li{
+    list-style-type: none;
+}
+
+header, main,footer{
+    width: 100%;
+    padding: 0 24px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-button{
+    border: none;
+    background: none;
+    color: #9E9AA7;
+    font-size: 32px;
+}
+
+
+
+
+.hidden{
+    display: none;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.section-one{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+img.illustration-working{
+    width: 130%;
+    order: -1;
+    margin-left: auto;
+}
+
+a.get-started{
+    display: inline-block;
+    color: white;
+    background-color: #2ACFCF;
+    width: 209px;
+    height: 60px;
+    border-radius: 34px;
+    padding: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section-two{
+  /* background-color: #F0F1F6; */
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.section-two form{
+    background-color: #3B3054;
+    background-image: url(images/bg-shorten-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    height: 194px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    border-radius: 12px;
+    padding: 26px 24px;
+} 
+
+
+form > input{
+   height: 47px;
+   padding: 16px;
+   border-radius: 8px;
+   border: 3px solid #F46262;
+   color: #9E9AA7;
+   font-size: 1.125rem;
+}
+
+form > label{
+    text-align: left;
+    margin-top: -10px;
+    color: #F46262;
+}
+
+
+form > button.shorten-btn{
+    background-color: #2ACFCF;
+    color: white;
+    border-radius: 8px;
+    padding: 16px;
+    height: 60px;
+    font-size: 1.125rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.insert-shortened-url{
+   height: auto;
+   margin-top: 50px;
+   margin-bottom: 50px;
+   /* border: 10px solid black; */
+}
+
+.shortened-url-container{
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #FFFFFF; */
+    height: 168px;
+    padding: 16px 12px;
+    border-radius: 12px;
+    margin: 0;
+    /* border: 3px solid red; */
+}
+
+p.reduce-length{
+    color: red;
+    border: 10px solid gold;
+    display: inline-block;
+    width: 100%;
+    font-size: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.shortened-url-container .shortened-link{
+    color: #2ACFCF;
+}
+
+.shortened-url-container button{
+    background-color: #2ACFCF;
+    border: none;
+    color: #FFFFFF;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    height: 40px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+
+.section-three{
+   background-color: #F0F1F6;
+   display: flex;
+   flex-direction: column;
+   margin-top: 50px;
+   gap: 65px;
+}
+
+.section-three p{
+    font-size: 1rem;
+}
+
+.advanced{
+    background-color: #FFFFFF;
+    height: 262px;
+    margin-bottom: 65px;
+    border-radius: 8px;
+    padding: 40px 24px;
+}
+
+.advanced > img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #3B3054;
+    margin-top: -70px;
+}
+
+.section-four{
+    margin: 0 -24px;
+    height: 300px;
+    background-color: #3B3054;
+    background-image: url(images/bg-boost-mobile.svg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 23px;
+}
+
+footer{
+    height: 761px;
+    background-color: #232127;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer > img{
+    filter: brightness(0) invert(1);
+}
+
+footer > div{
+    text-align: center;
+}
+
+footer ul{
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons{
+    display: flex;
+    gap:30px;
+}

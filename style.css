@@ -17,8 +17,7 @@ body{
     align-items: center;
     text-align: center;
     color: #9E9AA7;
-    background-color: #FFFFFF;
-    padding-top: 36px;
+    background-color: #F0F1F6;
     font-size: 1.125rem; 
 }
 
@@ -56,6 +55,8 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #FFFFFF;
+    padding-top: 36px;
 }
 
 .nav-button{
@@ -81,7 +82,9 @@ main{
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
+    margin: 0 -24px;
     overflow: hidden;
+    background-color: #FFFFFF;
 }
 
 img.illustration-working{
@@ -105,7 +108,6 @@ a.get-started{
 }
 
 .section-two{
-  /* background-color: #F0F1F6; */
   display: flex;
   flex-direction: column;
   height: auto;
@@ -158,32 +160,33 @@ form > button.shorten-btn{
    height: auto;
    margin-top: 50px;
    margin-bottom: 50px;
-   /* border: 10px solid black; */
+   text-align: left;
 }
 
 .shortened-url-container{
     min-width: 0;
     display: flex;
     flex-direction: column;
-    /* background-color: #FFFFFF; */
-    height: 168px;
+    background-color: #FFFFFF;
+    min-height: 168px;
     padding: 16px 12px;
     border-radius: 12px;
     margin: 0;
-    /* border: 3px solid red; */
 }
 
 p.reduce-length{
-    color: red;
-    border: 10px solid gold;
+    color: #35323E;
     display: inline-block;
     width: 100%;
-    font-size: 100px;
+    font-size: 16px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
+hr{
+    width: 100%;
+}
 .shortened-url-container .shortened-link{
     color: #2ACFCF;
 }
@@ -227,6 +230,7 @@ p.reduce-length{
     border-radius: 50%;
     background-color: #3B3054;
     margin-top: -70px;
+    /* border-top: 20px solid #2ACFCF; */
 }
 
 .section-four{

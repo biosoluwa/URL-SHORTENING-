@@ -111,6 +111,7 @@ a.get-started{
   display: flex;
   flex-direction: column;
   height: auto;
+  margin-top: 70px;
 }
 
 .section-two form{
@@ -157,6 +158,9 @@ form > button.shorten-btn{
 }
 
 .insert-shortened-url{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
    height: auto;
    margin-top: 50px;
    margin-bottom: 50px;
@@ -203,13 +207,17 @@ hr{
     cursor: pointer;
 }
 
+.copy.copied{
+    background-color: #3B3054;
+}
+
 
 .section-three{
    background-color: #F0F1F6;
    display: flex;
    flex-direction: column;
-   margin-top: 50px;
-   gap: 65px;
+   margin-top: 0;
+   margin-bottom: 70px;
 }
 
 .section-three p{
@@ -219,7 +227,7 @@ hr{
 .advanced{
     background-color: #FFFFFF;
     height: 262px;
-    margin-bottom: 65px;
+    margin-top: 65px;
     border-radius: 8px;
     padding: 40px 24px;
 }
@@ -230,7 +238,6 @@ hr{
     border-radius: 50%;
     background-color: #3B3054;
     margin-top: -70px;
-    /* border-top: 20px solid #2ACFCF; */
 }
 
 .section-four{

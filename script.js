@@ -2,15 +2,20 @@
 const form = document.getElementById("form");
 const insertShortenedUrl = document.getElementById("insert-shortened-url")
 
-
 form.addEventListener('submit', function(e){
     e.preventDefault()
+   const inputElm = document.getElementById("shorten-text");
+   if (!inputElm.value){
+    alert("Paste a link in the input field")
+   }else{
     shortenUrl()
+   }
 })
 
 function shortenUrl(){
     const inputElm = document.getElementById("shorten-text");
     const  encodedUrl = encodeURIComponent(inputElm.value)
+    const existing = JSON.parse(localStorage.getItem("shortUrl"))
     fetch(`https://is.gd/create.php?format=json&url=${encodedUrl}`)
          .then(res => res.json())
          .then(data => {
@@ -21,14 +26,13 @@ function shortenUrl(){
                              <p class="reduce-length"> ${inputElm.value} </p>
                              <hr/>
                              <p class="shortened-link">${data.shorturl}</p>
-                             <button class="copy" data-id="copy">Copy</button>
+                             <button class="copy" id="copy" data-copy="${data.shorturl}">Copy</button>
                          </div>
             `
-            console.log(shortUrl)
-            localStorage.setItem("shortUrl", JSON.stringify(shortUrl))
-            insertShortenedUrl.innerHTML = JSON.parse(localStorage.getItem("shortUrl"))
-            shortUrl = JSON.parse(localStorage.getItem("shortUrl"))
-
+            const updated = existing + shortUrl
+            localStorage.setItem("shortUrl", JSON.stringify(updated))
+            insertShortenedUrl.innerHTML += shortUrl
+                inputElm.value = ''
         })
 }
 
@@ -37,6 +41,12 @@ insertShortenedUrl.innerHTML = JSON.parse(localStorage.getItem("shortUrl"))
 
 document.addEventListener('click', function(e){
     if(e.target.classList.contains('copy')){
-        console.log(e.target.dataset)
+        navigator.clipboard.writeText(e.target.dataset.copy)
+             e.target.classList.add('copied')
+              e.target.textContent = 'Copied!'
+        setTimeout(function(){
+                e.target.classList.remove('copied')
+                e.target.textContent = 'Copy'
+        }, 2000)
     }
 })

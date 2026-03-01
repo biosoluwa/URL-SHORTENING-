@@ -71,6 +71,25 @@ header{
     display: none;
 }
 
+a.login{
+    text-decoration: none;
+    color: #9E9AA7;
+}
+
+a.sign-up{
+    width: 116px;
+    height: 40px;
+    color: white;
+    background-color: #2ACFCF;
+    border-radius: 20px;
+    padding: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 main{
     display: flex;
     flex-direction: column;
@@ -128,7 +147,7 @@ a.get-started{
 } 
 
 
-form > input{
+form  input{
    height: 47px;
    padding: 16px;
    border-radius: 8px;
@@ -137,7 +156,7 @@ form > input{
    font-size: 1.125rem;
 }
 
-form > label{
+form  label{
     text-align: left;
     margin-top: -10px;
     color: #F46262;
@@ -284,8 +303,13 @@ footer ul{
         padding: 0 160px;
     }
 
+    header{
+        height: 128px;
+    }
+
     header nav{
         display: flex;
+        align-items: center;
         justify-content: space-between;
     }
 
@@ -295,6 +319,7 @@ footer ul{
     
 .logo{
   width: 111px;
+  height: 36px;
 }
 
     .nav-button i{
@@ -326,13 +351,28 @@ footer ul{
         text-align: left;
     }
     
+    
     .section-two form{
         flex-direction: row;
+        align-items: center;
+        background-image: url(images/bg-shorten-desktop.svg);
     }
 
-    form input{
+     .input-and-label{
+        display: flex;
+        flex-direction: column;
         width: 67%;
+     }
+
+    #shorten-text{
+        width: 100%;
     }
+
+    
+form  label{
+    margin-top: 0;
+}
+
 
     .shorten-btn{
       width: 19%;
@@ -340,7 +380,9 @@ footer ul{
 
     .shortened-url-container{
         flex-direction: row;
-        height: 64px;
+        align-items: start;
+       min-height: 64px;
+       padding: 0 24px;
         justify-content: space-between;
     }
 
@@ -357,6 +399,13 @@ footer ul{
         width: 30%;
         align-items: center;
     }
+
+    
+.shortened-url-container button{
+    width: 113px;
+    margin-left: 16px;
+}
+
 
     .advanced-divs{
        display: flex;

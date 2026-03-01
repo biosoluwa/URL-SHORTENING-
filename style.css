@@ -67,8 +67,6 @@ header{
 }
 
 
-
-
 .hidden{
     display: none;
 }
@@ -277,4 +275,134 @@ footer ul{
 .social-icons{
     display: flex;
     gap:30px;
+}
+
+
+@media(min-width: 1024px){
+ 
+    header, main,footer{
+        padding: 0 160px;
+    }
+
+    header nav{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hidden{
+        display: flex;
+    }
+    
+.logo{
+  width: 111px;
+}
+
+    .nav-button i{
+        display: none;
+    }
+
+    header ul,
+    header > nav{
+        display:  flex;
+        gap: 32px;
+    }
+
+    .section-one{
+        flex-direction: row;
+        justify-content: space-between; 
+        align-items: center;
+        height: 546px; 
+        margin: 0 -160px; 
+        padding: 0 160px;
+    }
+    img.illustration-working{
+        order: 0;
+        width: 50%;
+        margin-right: -200px;
+    }
+
+    .hero{
+        width: 544px;
+        text-align: left;
+    }
+    
+    .section-two form{
+        flex-direction: row;
+    }
+
+    form input{
+        width: 67%;
+    }
+
+    .shorten-btn{
+      width: 19%;
+    }
+
+    .shortened-url-container{
+        flex-direction: row;
+        height: 64px;
+        justify-content: space-between;
+    }
+
+    hr{
+        display: none;
+    }
+
+    p.reduce-length{
+        width: 25.36%;
+    }
+
+    .shortened-url-container div{
+        display: flex;
+        width: 30%;
+        align-items: center;
+    }
+
+    .advanced-divs{
+       display: flex;
+       gap: 32px;
+    }
+
+    .advanced{
+        width: 31.42%;
+        height: 330px;
+    }
+    .advanced img{
+        margin-top: -70px;
+        margin-left: -90px;
+    }
+
+    .section-four{
+    margin: 0 -160px;
+    height: 250px;
+    background-image: url(images/bg-boost-desktop.svg);
+   }
+
+   
+footer{
+    height: 314px;
+    background-color: #232127;
+    flex-direction: row;
+    align-items: start;
+    padding-top: 100px;
+}
+
+footer > img{
+    margin-right: 277px;
+}
+
+footer div{
+    margin-right: 50px;
+}
+
+.social-icons{
+    display: flex;
+    width: 168px;
+    gap:15px;
+}
+
+footer  h4{
+    margin-top: 0;
+}
+
 }

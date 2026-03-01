@@ -25,9 +25,11 @@ function shortenUrl(){
                          <div class="shortened-url-container">
                              <p class="reduce-length"> ${inputElm.value} </p>
                              <hr/>
-                             <p class="shortened-link">${data.shorturl}</p>
-                             <button class="copy" id="copy" data-copy="${data.shorturl}">Copy</button>
-                         </div>
+                             <div>
+                                <p class="shortened-link">${data.shorturl}</p>
+                                <button class="copy" id="copy" data-copy="${data.shorturl}">Copy</button>
+                             </div>
+                        </div>
             `
             const updated = existing + shortUrl
             localStorage.setItem("shortUrl", JSON.stringify(updated))
